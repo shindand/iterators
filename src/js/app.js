@@ -34,3 +34,12 @@ range[Symbol.iterator] = function () {
 for (let num of range) {
   console.log(num);
 }
+
+
+range[Symbol.iterator] = function *() {
+  yield this;
+}
+
+for (let elem of range) {
+	console.log(elem); 
+}
